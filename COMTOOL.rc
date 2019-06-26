@@ -1,0 +1,629 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中立国(系统默认) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_COMTOOL_DIALOG DIALOGEX 0, 0, 817, 467
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "监控器黑盒测试软件"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "串口设置",IDC_STATIC,37,33,109,135
+    GROUPBOX        "通讯状态",IDC_STATIC,155,33,109,135
+    EDITTEXT        IDC_SendEdit,585,63,216,80,ES_MULTILINE | ES_AUTOVSCROLL,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_ReceiveEdit,583,233,216,137,ES_MULTILINE | 
+                    WS_VSCROLL | NOT WS_TABSTOP,WS_EX_DLGMODALFRAME
+    GROUPBOX        "发送",IDC_STATIC,574,33,236,137
+    GROUPBOX        "接收",IDC_STATIC,574,192,233,187
+    PUSHBUTTON      "退出",IDC_QUIT,7,444,29,14
+    PUSHBUTTON      "关于",IDC_ABOUT,7,423,29,14,NOT WS_VISIBLE
+    CONTROL         "Check1",IDC_BHexS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    589,151,9,15
+    PUSHBUTTON      "清空显示",IDC_ClearS,674,149,53,15
+    PUSHBUTTON      "手工发送",IDC_Send,742,149,53,15
+    LTEXT           "十六进制发送",IDC_STATIC,601,155,55,10
+    CONTROL         "Check1",IDC_BHexR,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,591,207,9,15
+    PUSHBUTTON      "清空显示",IDC_ClearR,683,207,53,15
+    LTEXT           "十六进制显示",IDC_STATIC,607,212,54,10
+    CONTROL         "",IDC_BAutoSend,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    605,43,9,15
+    LTEXT           "自动发送",IDC_STATIC,617,47,45,10
+    LTEXT           "发送周期",IDC_STATIC,675,45,33,11
+    EDITTEXT        IDC_SendPeriod,716,43,49,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "毫秒",IDC_STATIC,772,45,22,9
+    RTEXT           "选择串口：",IDC_STATIC,45,51,40,9
+    RTEXT           "波特率：",IDC_STATIC,45,68,40,9
+    RTEXT           "数据位：",IDC_STATIC,45,84,40,9
+    RTEXT           "校验位：",IDC_STATIC,45,101,40,9
+    RTEXT           "停止位：",IDC_STATIC,45,118,40,9
+    PUSHBUTTON      "打开串口",IDC_OpenClose,63,144,55,14
+    COMBOBOX        IDC_COM,85,49,58,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_Baudrate,85,65,58,76,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DataBits,85,82,58,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_ParityBits,85,99,58,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_StopBits,85,117,58,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "串口状态：",IDC_STATIC,171,67,40,9
+    RTEXT           "发送字节：",IDC_STATIC,171,85,40,9
+    RTEXT           "接收字节：",IDC_STATIC,171,101,40,9
+    CTEXT           "关闭",IDC_Status,211,64,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "0",IDC_SendBytes,211,82,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "0",IDC_ReceiveBytes,211,99,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "清除计数",IDC_ClearCounter,184,144,55,14
+    CTEXT           "Static",IDC_Description,37,17,517,13,SS_CENTERIMAGE
+    LTEXT           "文件路径:",IDC_STATIC,293,49,37,8
+    EDITTEXT        IDC_PATH,335,48,174,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "打开",IDC_BUTTON1,516,47,30,11
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,37,179,523,15
+    GROUPBOX        "其他",IDC_STATIC,277,33,281,81
+    EDITTEXT        IDC_TXT,295,69,250,38,ES_MULTILINE | WS_VSCROLL,
+                    WS_EX_DLGMODALFRAME
+    GROUPBOX        "",IDC_STATIC,38,192,523,190
+    RTEXT           "血泵硬件编号",IDC_S1,48,225,59,8
+    RTEXT           "磁浮状态",IDC_S2,170,225,59,8
+    RTEXT           "电机状态",IDC_S3,300,225,51,8
+    RTEXT           "实时转速",IDC_S4,425,225,43,8
+    RTEXT           "目标转速",IDC_S5,48,264,59,8
+    RTEXT           "实时流量",IDC_S6,170,264,59,8
+    RTEXT           "实时功耗",IDC_S7,292,264,59,8
+    RTEXT           "左路电压",IDC_S8,409,264,59,8
+    RTEXT           "右路电压",IDC_S9,48,303,59,8
+    RTEXT           "左路电量",IDC_S10,170,303,59,8
+    RTEXT           "%     右路电量",IDC_S11,292,303,59,8
+    RTEXT           "%    电源选择",IDC_S12,409,303,59,8
+    RTEXT           "静音",IDC_S13,48,343,59,8
+    RTEXT           "异常代码",IDC_S14,179,342,50,8
+    RTEXT           "控制器版本",IDC_S15,292,342,59,8
+    RTEXT           "血泵版本",IDC_S16,409,342,59,8
+    EDITTEXT        IDC_V1,117,222,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V2,237,221,54,50,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V4,477,221,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V3,361,223,58,60,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V5,117,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V6,237,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V7,361,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V8,477,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V9,117,300,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V10,237,301,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V11,361,300,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V12,477,301,51,78,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_V13,117,339,52,64,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V14,237,339,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V15,361,339,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V16,477,339,52,14,ES_AUTOHSCROLL
+    RTEXT           "患者姓名",IDC_S17,59,266,34,8
+    EDITTEXT        IDC_V17,98,263,82,14,ES_AUTOHSCROLL
+    RTEXT           "患者编号",IDC_S18,184,265,34,8
+    RTEXT           "性别",IDC_S19,304,265,34,8
+    RTEXT           "出生日期",IDC_S20,421,265,34,8
+    EDITTEXT        IDC_V18,220,263,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V20,460,263,82,14,ES_AUTOHSCROLL
+    RTEXT           "植入日期",IDC_S21,59,299,34,8
+    EDITTEXT        IDC_V21,98,296,82,14,ES_AUTOHSCROLL
+    RTEXT           "目标转速",IDC_S22,182,298,34,8
+    RTEXT           "高功率阀值",IDC_S23,304,298,34,8
+    RTEXT           "低流量阀值",IDC_S24,421,298,34,8
+    EDITTEXT        IDC_V22,220,296,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V23,344,296,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V24,460,296,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TAB1_TXT,57,211,488,159,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL,WS_EX_DLGMODALFRAME
+    CONTROL         "帧头错误",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,308,129,46,10
+    CONTROL         "帧尾错误",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,393,129,46,10
+    CONTROL         "校验错误",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,479,129,46,10
+    CONTROL         "命令字节错误",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,307,152,61,10
+    CONTROL         "数据区格式错误",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,394,152,67,10
+    CONTROL         "随机注入",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,479,152,46,10
+    GROUPBOX        "错误模拟",IDC_STATIC,277,117,281,50
+    COMBOBOX        IDC_V19,344,265,70,64,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_COMTOOL_DIALOG1 DIALOGEX 0, 0, 817, 467
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "qq:3252571383"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "串口设置",IDC_STATIC,37,33,109,135
+    GROUPBOX        "通讯状态",IDC_STATIC,155,33,109,135
+    EDITTEXT        IDC_SendEdit,585,63,216,80,ES_MULTILINE | ES_AUTOVSCROLL,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_ReceiveEdit,583,233,216,137,ES_MULTILINE | 
+                    WS_VSCROLL | NOT WS_TABSTOP,WS_EX_DLGMODALFRAME
+    GROUPBOX        "发送",IDC_STATIC,574,33,236,137
+    GROUPBOX        "接收",IDC_STATIC,574,192,233,187
+    PUSHBUTTON      "退出",IDC_QUIT,7,444,29,14
+    PUSHBUTTON      "关于",IDC_ABOUT,7,423,29,14,NOT WS_VISIBLE
+    CONTROL         "Check1",IDC_BHexS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    589,151,9,15
+    PUSHBUTTON      "清空显示",IDC_ClearS,674,149,53,15
+    PUSHBUTTON      "手工发送",IDC_Send,742,149,53,15
+    LTEXT           "十六进制发送",IDC_STATIC,601,155,55,10
+    CONTROL         "Check1",IDC_BHexR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    591,207,9,15
+    PUSHBUTTON      "清空显示",IDC_ClearR,683,207,53,15
+    LTEXT           "十六进制显示",IDC_STATIC,607,212,54,10
+    CONTROL         "",IDC_BAutoSend,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    605,43,9,15
+    LTEXT           "自动发送",IDC_STATIC,617,47,45,10
+    LTEXT           "发送周期",IDC_STATIC,675,45,33,11
+    EDITTEXT        IDC_SendPeriod,716,43,49,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "毫秒",IDC_STATIC,772,45,22,9
+    RTEXT           "选择串口：",IDC_STATIC,45,51,40,9
+    RTEXT           "波特率：",IDC_STATIC,45,68,40,9
+    RTEXT           "数据位：",IDC_STATIC,45,84,40,9
+    RTEXT           "校验位：",IDC_STATIC,45,101,40,9
+    RTEXT           "停止位：",IDC_STATIC,45,118,40,9
+    PUSHBUTTON      "打开串口",IDC_OpenClose,63,144,55,14
+    COMBOBOX        IDC_COM,85,49,58,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_Baudrate,85,65,58,76,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DataBits,85,82,58,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_ParityBits,85,99,58,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_StopBits,85,117,58,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "串口状态：",IDC_STATIC,171,67,40,9
+    RTEXT           "发送字节：",IDC_STATIC,171,85,40,9
+    RTEXT           "接收字节：",IDC_STATIC,171,101,40,9
+    CTEXT           "关闭",IDC_Status,211,64,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "0",IDC_SendBytes,211,82,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "0",IDC_ReceiveBytes,211,99,40,16,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "清除计数",IDC_ClearCounter,184,144,55,14
+    CTEXT           "Static",IDC_Description,37,17,517,13,SS_CENTERIMAGE
+    LTEXT           "文件路径:",IDC_STATIC,293,49,37,8
+    EDITTEXT        IDC_PATH,335,48,174,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "打开",IDC_BUTTON1,516,47,30,11
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,37,179,523,15
+    GROUPBOX        "其他",IDC_STATIC,277,33,281,81
+    EDITTEXT        IDC_TXT,295,66,250,42,ES_MULTILINE | ES_AUTOVSCROLL,
+                    WS_EX_DLGMODALFRAME
+    GROUPBOX        "",IDC_STATIC,38,192,523,190
+    RTEXT           "血泵硬件编号",IDC_S1,48,225,59,8
+    RTEXT           "磁浮状态",IDC_S2,170,225,59,8
+    RTEXT           "电机状态",IDC_S3,300,225,51,8
+    RTEXT           "实时转速",IDC_S4,425,225,43,8
+    RTEXT           "目标转速",IDC_S5,48,264,59,8
+    RTEXT           "实时流量",IDC_S6,170,264,59,8
+    RTEXT           "实时功耗",IDC_S7,292,264,59,8
+    RTEXT           "左路电压",IDC_S8,409,264,59,8
+    RTEXT           "右路电压",IDC_S9,48,303,59,8
+    RTEXT           "左路电量",IDC_S10,170,303,59,8
+    RTEXT           "右路电量",IDC_S11,292,303,59,8
+    RTEXT           "电源选择",IDC_S12,409,303,59,8
+    RTEXT           "静音",IDC_S13,48,343,59,8
+    RTEXT           "异常代买",IDC_S14,179,342,50,8
+    RTEXT           "控制器版本",IDC_S15,292,342,59,8
+    RTEXT           "血泵版本",IDC_S16,409,342,59,8
+    EDITTEXT        IDC_V1,117,222,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V2,237,221,54,50,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V4,477,221,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V3,361,223,58,60,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V5,117,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V6,237,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V7,361,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V8,477,261,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V9,117,300,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V10,237,301,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V11,361,300,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_V12,477,301,51,78,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_V13,117,339,52,64,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_V14,237,339,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V15,361,339,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V16,477,339,52,14,ES_AUTOHSCROLL
+    RTEXT           "患者姓名",IDC_S17,66,406,34,8
+    EDITTEXT        IDC_V17,105,403,82,14,ES_AUTOHSCROLL
+    RTEXT           "患者编号",IDC_S18,191,405,34,8
+    RTEXT           "性别",IDC_S19,311,405,34,8
+    RTEXT           "出生日期",IDC_S20,428,405,34,8
+    EDITTEXT        IDC_V18,227,403,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V19,351,403,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V20,467,403,82,14,ES_AUTOHSCROLL
+    RTEXT           "植入日期",IDC_S21,66,439,34,8
+    EDITTEXT        IDC_V21,105,436,82,14,ES_AUTOHSCROLL
+    RTEXT           "目标转速",IDC_S22,189,438,34,8
+    RTEXT           "高功率阀值",IDC_S23,311,438,34,8
+    RTEXT           "低流量阀值",IDC_S24,428,438,34,8
+    EDITTEXT        IDC_V22,227,436,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V23,351,436,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_V24,467,436,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TAB1_TXT,57,211,488,159,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL,WS_EX_DLGMODALFRAME
+    CONTROL         "帧头错误",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,308,129,46,10
+    CONTROL         "帧尾错误",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,393,129,46,10
+    CONTROL         "校验错误",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,479,129,46,10
+    CONTROL         "命令字节错误",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,307,152,61,10
+    CONTROL         "数据区格式错误",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,394,152,67,10
+    CONTROL         "随机注入",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,479,152,46,10
+    GROUPBOX        "错误模拟",IDC_STATIC,277,117,281,50
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_COMTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 810
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 458
+    END
+
+    IDD_COMTOOL_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 810
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 458
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_COMTOOL_DIALOG DLGINIT
+BEGIN
+    IDC_V2, 0x403, 2, 0
+0x0030, 
+    IDC_V2, 0x403, 2, 0
+0x0031, 
+    IDC_V3, 0x403, 2, 0
+0x0030, 
+    IDC_V3, 0x403, 2, 0
+0x0031, 
+    IDC_V3, 0x403, 2, 0
+0x0032, 
+    IDC_V12, 0x403, 2, 0
+0x0030, 
+    IDC_V12, 0x403, 2, 0
+0x0031, 
+    IDC_V12, 0x403, 2, 0
+0x0032, 
+    IDC_V13, 0x403, 2, 0
+0x0030, 
+    IDC_V13, 0x403, 2, 0
+0x0031, 
+    IDC_V19, 0x403, 2, 0
+0x0030, 
+    IDC_V19, 0x403, 2, 0
+0x0031, 
+    0
+END
+
+IDD_COMTOOL_DIALOG1 DLGINIT
+BEGIN
+    IDC_V2, 0x403, 2, 0
+0x0030, 
+    IDC_V2, 0x403, 2, 0
+0x0031, 
+    IDC_V3, 0x403, 2, 0
+0x0030, 
+    IDC_V3, 0x403, 2, 0
+0x0031, 
+    IDC_V12, 0x403, 2, 0
+0x0030, 
+    IDC_V12, 0x403, 2, 0
+0x0031, 
+    IDC_V12, 0x403, 2, 0
+0x0032, 
+    IDC_V13, 0x403, 2, 0
+0x0030, 
+    IDC_V13, 0x403, 2, 0
+0x0031, 
+    0
+END
+
+#endif    // 中立国(系统默认) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于串口工具"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "串口工具 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C)2017-CHBiomedical ",IDC_STATIC,40,25,148,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 241, 240
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "异常代码计算"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,127,219,50,14
+    PUSHBUTTON      "取消",IDCANCEL,58,219,50,14
+    CONTROL         "血泵初始化错误",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,22,70,10
+    CONTROL         "血泵未连接",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,22,70,10
+    CONTROL         "血泵停止工作",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,55,70,10
+    CONTROL         "控制器故障",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,56,70,10
+    CONTROL         "仅适配器供电",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,88,70,10
+    CONTROL         "电池电量极地",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,87,70,10
+    CONTROL         "功率过高",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,121,70,10
+    CONTROL         "流量过低",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,120,70,10
+    CONTROL         "电池电量低",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,154,70,10
+    CONTROL         "只有一个电池",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,154,70,10
+    CONTROL         "存储空间不足",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,187,70,10
+END
+
+IDD_DLG_INPUT DIALOG DISCARDABLE  0, 0, 187, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,110,46,50,14
+    PUSHBUTTON      "取消",IDCANCEL,35,46,50,14
+    EDITTEXT        IDC_EDIT1,52,16,84,16,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_DLG_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\COMTOOL.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\COMTOOL.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "COMTOOL Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "COMTOOL\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "COMTOOL.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "COMTOOL 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 COMTOOL(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\COMTOOL.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
